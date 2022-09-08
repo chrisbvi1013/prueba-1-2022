@@ -1,0 +1,17 @@
+<button (click) = "borrarH()">borrar Heroe</button>
+
+<div *ngIf="hb != ''; else noBorr">
+    heroe borrado
+    <span>{{ hb }}</span>
+</div>
+
+<ng-template #noBorr>
+    <h3>no borrado</h3>
+</ng-template>
+
+<ul>
+    <li *ngFor="let l of heroe; let i = index">
+        {{ i + 1 }}. {{ l }}
+    </li>
+</ul>
+
